@@ -12,11 +12,11 @@
           <a @click="showCode(true)" href="javascript:void (0)" class="animate__animated animate__bounceIn animate__delay-2s"><i class="wfont wweixingongzhonghao"></i></a>
         </div>
         <div class="template">
-          <div class="item animate__animated animate__fadeInLeft animate__delay-3s">
+          <div @click="goTo('/templatelist')" class="item animate__animated animate__fadeInLeft animate__delay-3s">
             <i class="wfont wguanwang"></i>
             <p>企业网模板</p>
           </div>
-          <div class="item animate__animated animate__fadeInRight animate__delay-3s">
+          <div @click="locationTo" class="item animate__animated animate__fadeInRight animate__delay-3s">
             <i class="wfont wxitong2"></i>
             <p>后台系统模板</p>
           </div>
@@ -47,6 +47,12 @@
     methods: {
       showCode(show){
         this.codeShow = show;
+      },
+      goTo(url){
+        this.$router.push(url);
+      },
+      locationTo(){
+        location.href = '/system/'
       }
     }
   }
