@@ -33,16 +33,24 @@
   </div>
 </template>
 <script>
+  import CanvasNest from 'canvas-nest'
   export default {
     name: '',
     components: {},
     data() {
       return {
-        codeShow: false
+        codeShow: false,
+        cn: ''
       }
     },
     mounted() {
-
+      const config = {
+        color: '213,21,21',
+        count: 350,
+        zIndex: 5
+      };
+      let element = document.getElementsByClassName('home')[0];
+      this.cn = new CanvasNest(element, config);
     },
     methods: {
       showCode(show){
@@ -54,6 +62,9 @@
       locationTo(){
         location.href = '/system/'
       }
+    },
+    beforeDestroy() {
+      this.cn.destroy();
     }
   }
 </script>
@@ -74,7 +85,7 @@
       width: 100%;
       height: 100%;
       text-align: center;
-      background: rgba(0, 0, 0, .4);
+      background: rgba(0, 0, 0, .1);
       h4{
         margin-top: 60px;
       }
@@ -95,6 +106,7 @@
     }
     a:hover i{
       transform: translateY(-10px);
+      color: $theme-color;
     }
     i{
       display: inline-block;
@@ -130,9 +142,11 @@
     }
     .item:hover i{
       transform: translateY(-10px);
+      color: $theme-color;
     }
     .item:hover p{
       transform: translateY(-10px);
+      color: $theme-color;
     }
     i{
       display: inline-block;
