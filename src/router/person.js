@@ -2,17 +2,17 @@ export default [
   {
     path: '/index',
     name: 'Person',
-    component: () => import(/* webpackChunkName: "person" */ '../views/person/index.vue'),
+    component: () => import(/* webpackChunkName: "person" */ '../views/person/Index.vue'),
     meta: {
       title: "首页",
     },
   },
   {
-    path: '/templatelist',
-    name: 'TemplateList',
-    component: () => import(/* webpackChunkName: "templatelist" */ '../views/person/TemplateList.vue'),
+    path: '/home',
+    name: 'home',
+    component: () => import(/* webpackChunkName: "home" */ '../views/person/Home.vue'),
     meta: {
-      title: "模板列表",
+      title: "首页",
     },
   },
 ]

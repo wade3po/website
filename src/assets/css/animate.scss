@@ -1,0 +1,16 @@
+.fadeInUp {
+  animation: fadeInUp; 
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.fadeInDown{
+  animation: fadeInDown;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.delay1s{
+  animation-delay: 1s;
+}
+.delay2s{
+  animation-delay: 2s;
+}

@@ -12,7 +12,7 @@
           <a @click="showCode(true)" href="javascript:void (0)" class="animate__animated animate__bounceIn animate__delay-2s"><i class="wfont wweixingongzhonghao"></i></a>
         </div>
         <div class="template">
-          <div @click="goTo('/templatelist')" class="item animate__animated animate__fadeInLeft animate__delay-3s">
+          <div @click="goTo('/home')" class="item animate__animated animate__fadeInLeft animate__delay-3s">
             <i class="wfont wguanwang"></i>
             <p>企业网模板</p>
           </div>
@@ -33,14 +33,15 @@
   </div>
 </template>
 <script>
-  import CanvasNest from 'canvas-nest'
+  import CanvasNest from 'canvas-nest.js'
   export default {
     name: '',
     components: {},
     data() {
       return {
         codeShow: false,
-        cn: ''
+        cn: '',
+        ht: ''
       }
     },
     mounted() {
