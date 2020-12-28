@@ -2,6 +2,7 @@
   <div class="fireworks-wrap" :style="{height:height}">
     <canvas id="fireworks"></canvas>
     <slot></slot>
+    <img src="./fireworksImgs/spark1.png" alt="">
   </div>
 </template>
 <script>
@@ -36,7 +37,6 @@
         var seeds = '';
         var playerY = '';
         var sparkPics = '';
-        var s = '';
         var sparks = '';
         var sparkPic = '';
         var x = '';
@@ -71,13 +71,13 @@
           playerZ=-25;
           playerX=playerY=playerVX=playerVY=playerVZ=pitch=yaw=pitchV=yawV=0;
           scale=600;
-          seedTimer=0;seedInterval=5,seedLife=100;gravity=.02;
+          seedTimer=0;seedInterval=10,seedLife=100;gravity=.02;
           seeds=new Array();
           sparkPics=new Array();
-          s="https://cantelope.org/NYE/";
           for(let i=1;i<=10;++i){
             sparkPic=new Image();
-            sparkPic.src=s+"spark"+i+".png";
+            let imgFile = require(`./fireworksImgs/spark${i}.png`);
+            sparkPic.src = imgFile;
             sparkPics.push(sparkPic);
           }
           sparks=new Array();
@@ -325,7 +325,7 @@
 <style lang="scss" type="text/scss" scoped>
 .fireworks-wrap{
   width: 100%;
-  background: rgba(0, 0, 0, .8);
+  background: #333;
 }
   #fireworks{
     width: 100%;

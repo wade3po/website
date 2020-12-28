@@ -4,18 +4,18 @@
     <swiper :options="swiperOption" style="height: 100%">
       <swiper-slide>
         <Fireworks>
-          <div class="first-screen">
-            <p class="fadeInUp">欢迎关注个人订阅号</p>
-            <p class="fadeInUp delay1s">coding个人笔记</p>
-            <p class="fadeInUp delay2s" ><img src="../../assets/images/person/coding.png" alt=""></p>
-          </div>
+          
         </Fireworks>
       </swiper-slide>
       <swiper-slide>
         111111111111
       </swiper-slide>
       <swiper-slide>
-        2222222222222
+        <div class="coding-wrap">
+          <p class="fadeInUp delay3s">欢迎关注个人订阅号</p>
+          <p class="fadeInUp delay4s">coding个人笔记</p>
+          <p class="fadeInUp delay4s" ><img src="../../assets/images/person/coding.png" alt=""></p>
+        </div>
       </swiper-slide>
     </swiper>
   </div>
@@ -40,7 +40,7 @@
   }
 </script>
 <style lang="scss" type="text/scss" scoped>
-  .first-screen{
+  .coding-wrap{
     position: absolute;
     z-index: 10;
     top: 200px;
