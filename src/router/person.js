@@ -14,5 +14,12 @@ export default [
     meta: {
       title: "首页",
     },
+  },{
+    path: '/urlcollect',
+    name: 'urlcollect',
+    component: () => import(/* webpackChunkName: "urlcollect" */ '../views/person/UrlCollect.vue'),
+    meta: {
+      title: "网址导航",
+    },
   },
 ]

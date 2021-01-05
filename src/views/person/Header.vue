@@ -3,9 +3,8 @@
     <div class="header" :class="navActive">
       <img src="../../assets/images/person/logo.png" alt="">
       <ul class="nav-list fadeInDown">
-        <li class="active">首页</li>
-        <li>作品</li>
-        <li>关于</li>
+        <li v-for="val in navList" :class="currentUrl == val.url ? 'active' : ''"
+            @click="goTo(val.url)">{{val.name}}</li>
       </ul>
     </div>
   </div>
@@ -18,12 +17,25 @@
     components: {},
     data() {
       return {
-        navActive: ''
+        navActive: '',
+        currentUrl: '',
+        navList: [
+          {
+            name: '首页',
+            url: '/home'
+          },{
+            name: '网址导航',
+            url: '/urlcollect'
+          },{
+            name: '关于',
+            url: '/about'
+          },
+        ]
       }
     },
     mounted() {
-
       this.navListener();
+      this.currentUrl = this.$route.path;
     },
     methods:{
       navListener(){
@@ -31,7 +43,7 @@
           let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
           this.navActive = scrollTop >= 60 ? 'on' : 'off';
         }, 500))
-      }
+      },
     }
   }
 </script>

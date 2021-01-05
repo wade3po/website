@@ -2,7 +2,6 @@
   <div class="fireworks-wrap" :style="{height:height}">
     <canvas id="fireworks"></canvas>
     <slot></slot>
-    <img src="./fireworksImgs/spark1.png" alt="">
   </div>
 </template>
 <script>
@@ -171,7 +170,7 @@
             spark.trail=new Array();
             sparks.push(spark);
           }
-          
+
           d=Math.sqrt((x-playerX)*(x-playerX)+(y-playerY)*(y-playerY)+(z-playerZ)*(z-playerZ));
         }
         function doLogic(){

@@ -3,9 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import "@/assets/css/reset.scss"
-
 import 'animate.css';
+import "@/assets/css/reset.scss";
+
+import "@/assets/js/mixins.js";
 
 Vue.config.productionTip = false
 

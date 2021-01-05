@@ -1,27 +1,31 @@
 <template>
   <div class="home">
     <div class="first-screen">
-      <div class="module animate__animated animate__zoomIn">
+      <div class="module zoomIn"></div>
+      <div class="content">
         <img src="../../assets/images/person/avatar.jpg" alt=""
-             class="animate__animated animate__zoomInDown animate__delay-1s avatar">
+             class="bounceIn1 avatar delay1s">
         <div class="link">
-          <a href="https://github.com/wade3po" target="_blank"
-             class="animate__animated animate__bounceIn animate__delay-2s"><i class="wfont wgithub"></i></a>
-          <a href="https://www.zhihu.com/people/wade-8-95" target="_blank"
-             class="animate__animated animate__bounceIn animate__delay-2s"><i class="wfont wzhihu"></i></a>
-          <a @click="showCode(true)" href="javascript:void (0)" class="animate__animated animate__bounceIn animate__delay-2s"><i class="wfont wweixingongzhonghao"></i></a>
+          <a href="https://github.com/wade3po" target="_blank" class="bounceIn1 delay2s">
+            <i class="wfont wgithub"></i>
+          </a>
+          <a href="https://www.zhihu.com/people/wade-8-95" target="_blank"class="bounceIn1 delay2s">
+            <i class="wfont wzhihu"></i>
+          </a>
+          <a @click="showCode(true)" href="javascript:void (0)" class="bounceIn1 delay2s">
+            <i class="wfont wweixingongzhonghao"></i>
+          </a>
         </div>
         <div class="template">
-          <div @click="goTo('/home')" class="item animate__animated animate__fadeInLeft animate__delay-3s">
+          <div @click="goTo('/home')" class="item bounceIn1 delay3s">
             <i class="wfont wguanwang"></i>
-            <p>企业网模板</p>
+            <p>个人网站</p>
           </div>
-          <div @click="locationTo" class="item animate__animated animate__fadeInRight animate__delay-3s">
+          <div @click="locationTo" class="item bounceIn1 delay3s">
             <i class="wfont wxitong2"></i>
-            <p>后台系统模板</p>
+            <p>后台系统</p>
           </div>
         </div>
-        <h4 class="animate__animated animate__zoomInDown animate__delay-4s">个人写了一些纯静态的企业网和一个后台系统，感兴趣的可以浏览看看</h4>
       </div>
     </div>
 
@@ -87,9 +91,13 @@
       height: 100%;
       text-align: center;
       background: rgba(0, 0, 0, .1);
-      h4{
-        margin-top: 60px;
-      }
+    }
+    .content{
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      text-align: center;
     }
   }
   .avatar{

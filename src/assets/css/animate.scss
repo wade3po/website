@@ -1,3 +1,13 @@
+.bounceIn1{
+  animation: bounceIn; 
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.zoomIn{
+  animation: zoomIn; 
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
 .fadeInUp {
   animation: fadeInUp; 
   animation-duration: 2s;
