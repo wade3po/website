@@ -2,14 +2,19 @@ const wade = [
   {
     name: 'github',
     logo: 'github.png',
-    url: '',
-    desc: '面向开源及私有软件项目的托管平台'
+    url: 'https://github.com/wade3po',
+    desc: '我的GitHub'
   },{
     name: '知乎',
     logo: 'zhihu.png',
-    url: '',
-    desc: '有问题,上知乎。'
-  },
+    url: 'https://www.zhihu.com/people/wade-8-95',
+    desc: '我的知乎'
+  }, {
+    name: '精选文章',
+    logo: 'coding.png',
+    url: '/collectarticle',
+    desc: '自己收集的文章和项目'
+  }
 ]
 const standard = [
   {
@@ -111,6 +116,42 @@ const codespace = [
     desc: '基于 Git 的代码托管和研发协作平台'
   },
 ]
+const vuemobileui = [
+  {
+    name: 'Vant',
+    logo: 'vant.png',
+    url: 'https://youzan.github.io/vant/#/zh-CN/',
+    desc: '轻量、可靠的移动端 Vue 组件库'
+  },{
+    name: 'Mint',
+    logo: 'mint.png',
+    url: 'http://mint-ui.github.io/#!/zh-cn',
+    desc: '基于 Vue.js 的移动端组件库'
+  },{
+    name: 'Vux',
+    logo: 'vux.png',
+    url: 'https://vux.li/',
+    desc: '一个凑合的 Vue.js 移动端 UI 组件库,维护靠个人'
+  },
+]
+const vuepcui = [
+  {
+    name: 'Element',
+    logo: 'element.png',
+    url: 'https://element.eleme.cn/#/zh-CN',
+    desc: 'Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库'
+  },{
+    name: 'Ant Design Pro Vue',
+    logo: 'ant.png',
+    url: 'https://pro.antdv.com/',
+    desc: '开箱即用的中台前端/设计解决方案'
+  },{
+    name: 'View UI',
+    logo: 'iview.png',
+    url: 'https://www.iviewui.com/',
+    desc: '一套基于 Vue.js 的高质量UI 组件库,原先的 iView'
+  },
+]
 
 export default {
   wade,
@@ -119,4 +160,6 @@ export default {
   compilepack,
   search,
   codespace,
+  vuemobileui,
+  vuepcui,
 }

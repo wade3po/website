@@ -21,5 +21,19 @@ export default [
     meta: {
       title: "网址导航",
     },
+  },{
+    path: '/collectarticle',
+    name: 'collectarticle',
+    component: () => import(/* webpackChunkName: "collectarticle" */ '../views/person/CollectArticle.vue'),
+    meta: {
+      title: "精选文章",
+    },
+  },{
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "about" */ '../views/person/About.vue'),
+    meta: {
+      title: "关于",
+    },
   },
 ]

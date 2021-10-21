@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
+  <div class="wh100">
     <div class="first-screen">
-      <div class="module zoomIn"></div>
       <div class="content">
         <img src="../../assets/images/person/avatar.jpg" alt=""
              class="bounceIn1 avatar delay1s">
@@ -34,64 +33,45 @@
         <img src="../../assets/images/person/coding.png" alt="">
       </div>
     </transition>
+    <div class="back-mask"></div>
   </div>
 </template>
 <script>
-  import CanvasNest from 'canvas-nest.js'
+  
   export default {
     name: '',
     components: {},
     data() {
       return {
-        codeShow: false,
-        cn: '',
-        ht: ''
+        codeShow: false
       }
-    },
-    mounted() {
-      const config = {
-        color: '213,21,21',
-        count: 350,
-        zIndex: 5
-      };
-      let element = document.getElementsByClassName('home')[0];
-      this.cn = new CanvasNest(element, config);
     },
     methods: {
       showCode(show){
         this.codeShow = show;
       },
-      goTo(url){
-        this.$router.push(url);
-      },
       locationTo(){
         location.href = '/system/'
       }
     },
-    beforeDestroy() {
-      this.cn.destroy();
-    }
+    
   }
 </script>
 <style lang="scss" type="text/scss" scoped>
-  .home{
+  .back-mask{
+    position: fixed;
+    top: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    color: #fff;
+    background: rgba(0, 0, 0, .5);
   }
   .first-screen{
     position: relative;
     width: 100%;
     height: 100%;
-    background: url("../../assets/images/person/bg1.jpg") no-repeat 100% 100%;
-    .module{
-      position: absolute;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      background: rgba(0, 0, 0, .1);
-    }
+    background: url("../../assets/images/person/bg1.jpg") no-repeat;
+    background-size:100% 100%;
     .content{
       position: absolute;
       z-index: 3;
@@ -119,7 +99,7 @@
     }
     i{
       display: inline-block;
-      font-size: 50px;
+      font-size: 60px;
       color: #fff;
       transition:all 0.4s;
     }
@@ -138,9 +118,12 @@
     }
   }
   .template{
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 20px;
+    color: #FFF;
     .item{
       margin: 0 30px;
       text-align: center;
@@ -159,7 +142,7 @@
     }
     i{
       display: inline-block;
-      font-size: 80px;
+      font-size: 60px;
       cursor: pointer;
       transition:all 0.4s;
     }

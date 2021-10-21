@@ -11,7 +11,7 @@
         <div v-for="val in mainMenu" class="item-wrap" :ref="val.key" :key="val.key">
           <p class="menu-title">{{val.name}}</p>
           <ul>
-            <li v-for="item in val.list" @click="toOfficial(item.url)" :key="item.name">
+            <li v-for="item in val.list" @click="goTo(item.url)" :key="item.name">
               <div class="name-logo">
                 <img :src="require('@/assets/images/urlsLogo/' + item.logo)" alt="">
                 <span class="name">{{item.name}}</span>
@@ -89,10 +89,6 @@
         this.currentKey = key;
         let to = this.$refs[key][0].offsetTop - this.firstOffsetTop;
         this.animationScrollTo(this.$refs.urlList, to);
-      },
-      //打开新标签
-      toOfficial(url){
-        window.open(url);
       },
       //锚点定位动画滚动
       animationScrollTo(el, to) {

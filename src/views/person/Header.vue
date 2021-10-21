@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header" :class="navActive">
-      <img src="../../assets/images/person/logo.png" alt="">
+      <img src="../../assets/images/person/logo.jpg" alt="">
       <ul class="nav-list fadeInDown">
         <li v-for="val in navList" :class="currentUrl == val.url ? 'active' : ''"
             @click="goTo(val.url)">{{val.name}}</li>
@@ -51,7 +51,7 @@
   .header{
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 99;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,9 +59,12 @@
     height: 60px;
     box-sizing: border-box;
     padding: 0 20px;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .7);
     img{
       height: 50px;
+      width: 50px;
+      margin-left: 50px;
+      border-radius: 50%;
     }
     &.on{
       animation: navBgOn 1s linear;
