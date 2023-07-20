@@ -16,12 +16,28 @@
           </a>
         </div>
         <div class="template">
-          <div @click="goTo('/home')" class="item bounceIn1 delay3s">
+          <div @click="goTo('https://www.discountspig.com/lowcode/')" class="item bounceIn1 delay3s">
             <i class="wfont wguanwang"></i>
-            <p>个人网站</p>
+            <p>低代码平台</p>
+          </div>
+          <div @click="goTo('https://www.discountspig.com/game/index.html')" class="item bounceIn1 delay3s">
+            <i class="wfont wguanwang"></i>
+            <p>小游戏</p>
+          </div>
+          <div @click="goTo('https://www.discountspig.com/game/record.html')" class="item bounceIn1 delay3s">
+            <i class="wfont wguanwang"></i>
+            <p>网页在线录屏</p>
+          </div>
+          <div @click="goTo('https://www.discountspig.com/game/signature.html')" class="item bounceIn1 delay3s">
+            <i class="wfont wguanwang"></i>
+            <p>电子签名</p>
+          </div>
+          <div @click="goTo('https://www.discountspig.com/system/compressimg')" class="item bounceIn1 delay3s">
+            <i class="wfont wguanwang"></i>
+            <p>压缩图片</p>
           </div>
           <div @click="locationTo" class="item bounceIn1 delay3s">
-            <i class="wfont wxitong2"></i>
+            <i class="wfont wguanwang"></i>
             <p>后台系统</p>
           </div>
         </div>
@@ -73,6 +89,7 @@
     background: url("../../assets/images/person/bg1.jpg") no-repeat;
     background-size:100% 100%;
     .content{
+      overflow: auto;
       position: absolute;
       z-index: 3;
       width: 100%;
